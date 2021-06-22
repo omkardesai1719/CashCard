@@ -10,6 +10,11 @@ import java.util.Scanner;
 
 public class Transaction {
   
+	private static final String DEPOSITE = "1";
+	private static final String WITHDRAW = "2";
+	private static final String BALANCE_CHECK = "3";
+	private static final String EXIT = "4";
+	
 	public static void main(String[] args) {
 		showMenu();
 	}
@@ -18,7 +23,7 @@ public class Transaction {
 		String option = "";
 		DepositeService ds=new DepositeService();
 		WithdrawService ws=new WithdrawService();
-		BlanceCheckService bs=new BlanceCheckService();
+		BalanceCheckService bs=new BalanceCheckService();
 		
 		do {
 			try {
@@ -33,37 +38,31 @@ public class Transaction {
 				
 				switch(option)
 		        {
-		            case "1":
+		            case DEPOSITE:
 		            	int depositeAmount=0;
 						System.out.println("Enter Ammount to be Deposite");
-						try{
 				            depositeAmount = opt.nextInt();
-				        }catch (InputMismatchException e){
-				            System.err.println("Invalid Input");
-				        }
 						System.out.println("total balance : " + ds.deposite(depositeAmount));
 		                break;
-		            case "2":
+		            case WITHDRAW:
 		            	int withdrawAmount=0;
 						System.out.println("Enter Ammount to be Withdraw");
-						try{
 							withdrawAmount = opt.nextInt();
-				        }catch (InputMismatchException e){
-				            System.err.println("Invalid Input");
-				        }
 						System.out.println("total balance : "+ws.withdraw(withdrawAmount));
 		                break;
-		            case "3":
-		            	System.out.println("total balance : "+ bs.blanceCheck());
+		            case BALANCE_CHECK:
+		            	System.out.println("total balance : "+ bs.balanceCheck());
 		                break;
-		            case "4":
+		            case EXIT:
 		            	System.exit(0);
 		                break;
 		            default:
 		            	System.err.println("Invalid Option Entered.");
 		        }
 				
-			}catch (Exception e) {
+			}catch (InputMismatchException e){
+	            System.err.println("Invalid Input");
+	        }catch (Exception e) {
 				System.out.println(e.getMessage());
 			}		
 			

@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class BlanceCheckService {
-	public int blanceCheck()  throws Exception {		
+public class BalanceCheckService {
+	public int balanceCheck()  throws Exception {		
 		return balancedAmount();
 	}
 	
