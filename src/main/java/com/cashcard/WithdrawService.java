@@ -6,7 +6,7 @@ import java.sql.Statement;
 import com.cashcard.exception.InsufficientFundExcepetion;
 import com.cashcard.exception.NegativeAmountException;
 
-public class WithdrawServices {
+public class WithdrawService {
 	public int withdraw(int amount) throws Exception {
 		
 		if(amount < 0) throw new NegativeAmountException("Withdraw Amount cannot be negative");

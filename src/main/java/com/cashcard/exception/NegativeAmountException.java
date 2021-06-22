@@ -1,6 +1,6 @@
 package com.cashcard.exception;
 
-public class NegativeAmountException extends RuntimeException {
+public class NegativeAmountException extends Exception {
 
 	/**
 	 * 

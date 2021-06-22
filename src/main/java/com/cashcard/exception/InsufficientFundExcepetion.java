@@ -1,6 +1,6 @@
 package com.cashcard.exception;
 
-public class InsufficientFundExcepetion extends RuntimeException{
+public class InsufficientFundExcepetion extends Exception{
 	 
 		private static final long serialVersionUID = 1L;
 

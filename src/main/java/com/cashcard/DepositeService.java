@@ -5,7 +5,7 @@ import java.sql.Statement;
 
 import com.cashcard.exception.NegativeAmountException;
 
-public class DepositeServices {
+public class DepositeService {
 	public int deposite(int amount) throws Exception {
 				
 		if(amount < 0) throw new NegativeAmountException("Deposite Amount cannot be negative");

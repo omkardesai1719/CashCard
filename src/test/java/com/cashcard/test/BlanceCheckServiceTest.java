@@ -3,22 +3,22 @@ package com.cashcard.test;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.cashcard.BlanceCheckServices;
-import com.cashcard.DepositeServices;
+import com.cashcard.BlanceCheckService;
+import com.cashcard.DepositeService;
 
 import junit.framework.Assert;
 
-public class BlanceCheckServicesTest {
+public class BlanceCheckServiceTest {
 	@BeforeClass
 	public static void setup() throws Exception {
-		DepositeServices ds = new DepositeServices();
+		DepositeService ds = new DepositeService();
 		ds.deposite(500);
 	}
 	
 	
 	@Test
 	public void blanceCheckTest() throws Exception {
-		BlanceCheckServices bc=new BlanceCheckServices();
+		BlanceCheckService bc=new BlanceCheckService();
 		Assert.assertEquals(500, bc.blanceCheck());
 	}
 	
