@@ -39,7 +39,7 @@ public class Transaction {
 				switch (option) {
 				case DEPOSITE:
 					int depositeAmount = 0;
-					System.out.println("Enter Ammount to be Deposite");
+					System.out.println("Enter Ammount to be Deposit");
 					depositeAmount = opt.nextInt();
 					System.out.println("total balance : " + ds.deposite(depositeAmount));
 					break;
