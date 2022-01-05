@@ -19,7 +19,7 @@ public class DepositServiceTest {
 	@Test(expected = NegativeAmountException.class)
 	public void testDepositeNegativeAmount() throws Exception {
 		DepositService ds = new DepositService();
-		ds.deposite(-10);
+		ds.deposite(-20);
 	}
 
 }
