@@ -7,10 +7,10 @@ import java.sql.Statement;
 
 public class JDBCConnection {
 
-	private static final String JDBC_DRIVER = "org.h2.Driver";
-	private static final String DB_URL = "jdbc:h2:~/test";
-	private static final String USER = "sa";
-	private static final String PASS = "";
+	private static final String JDBC_DRIVER = ConstantsVariables.Driver;
+	private static final String DB_URL = ConstantsVariables.DB_URL;
+	private static final String USER = ConstantsVariables.USER;
+	private static final String PASS = ConstantsVariables.PASS;
 	private static Connection conn;
 
 	private static Connection createJDBCConnection() {
